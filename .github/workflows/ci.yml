@@ -36,3 +36,6 @@ jobs:
       - name: Run tests
         run: python -m pytest -v
 
+      - name: Build container image
+        run: podman build -t socialhub-api:${{ github.sha }} .
+
